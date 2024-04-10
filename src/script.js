@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loadCarsBtn = document.getElementById('loadCarsBtn');
     const carList = document.getElementById('carList');
+    var cors=require("cors");
+    app.use(cors());
+
+
     cars = [];
     loadCarsBtn.addEventListener('click', () => {
         fetch('http://localhost:3001/cars')
