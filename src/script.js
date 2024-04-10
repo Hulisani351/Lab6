@@ -1,8 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loadCarsBtn = document.getElementById('loadCarsBtn');
     const carList = document.getElementById('carList');
-    var cors=require("cors");
-    app.use(cors());
+    
+
+const express = require('express');
+const cors = require('cors');
+
+const app = express();
+
+// Allow all origins (not recommended for production)
+app.use(cors());
+
+// Other middleware and route handlers...
+
+// Start the server
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+});
+
 
 
     cars = [];
